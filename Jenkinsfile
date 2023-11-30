@@ -4,7 +4,7 @@ pipeline {
         
         stage('SonarQube analysis') {
             steps {
-                withSonarQubeEnv('SonarScanner') {
+                withSonarQubeEnv('SonarMsBuild') {
                     bat "mvn clean verify sonar:sonar"
                 }
             }
