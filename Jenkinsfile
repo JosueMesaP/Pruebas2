@@ -20,11 +20,11 @@ pipeline {
     }
     post{
             success{
-                bat "curl http://josue:josue2002@localhost:8080/job/FinalPruebas/job/NotificacionCorreca/build?token=FinalPruebas"
+                bat "curl http://Josue:josue2002@localhost:8080/job/FinalPruebas/job/NotificacionCorreca/build?token=FinalPruebas"
                 bat "echo Tarea Desplegar en servidor de produccion Iniciada correctamente"
             }
             failure{
-                bat "curl http://josue:josue2002@localhost:8080/job/FinalPruebas/job/Notificacion/build?token=FinalPruebas"
+                bat "curl http://Josue:josue2002@localhost:8080/job/FinalPruebas/job/Notificacion/build?token=FinalPruebas"
                 bat "echo Tarea notificar al correo Iniciada correctamente"
             }
         }
