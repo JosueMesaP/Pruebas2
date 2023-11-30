@@ -1,11 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage("Desplegar a pruebas") {
-            steps {
-                bat "curl http://Josue:josue2002@localhost:8080/job/FinalPruebas/job/DesplegarPruebas/build?token=Pruebas"
-            }
-        }
         stage('SonarQube analysis') {
             steps {
                 withSonarQubeEnv('Sonar') {
